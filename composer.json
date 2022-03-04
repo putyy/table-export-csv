@@ -1,0 +1,33 @@
+{
+    "name": "putyy/table-export-csv",
+    "description": "table页js导出csv",
+    "type": "library",
+    "keywords": ["table-export-csv", "laravel-admin", "extension"],
+    "homepage": "https://github.com/putyy/table-export-csv",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "putyy",
+            "email": "putyy@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pt\\WebExportCsv\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pt\\WebExportCsv\\WebExportCsvServiceProvider"
+            ]
+        }
+    }
+}
