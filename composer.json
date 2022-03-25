@@ -2,7 +2,11 @@
     "name": "putyy/table-export-csv",
     "description": "table页js导出csv",
     "type": "library",
-    "keywords": ["table-export-csv", "laravel-admin", "extension"],
+    "keywords": [
+        "table-export-csv",
+        "laravel-admin",
+        "extension"
+    ],
     "homepage": "https://github.com/putyy/table-export-csv",
     "license": "MIT",
     "authors": [

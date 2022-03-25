@@ -63,16 +63,16 @@ HTML;
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|string
      * 可重写上面的js函数
-        $grid->tools(function ($tools) {
-            $func = <<<HTML
-                <script type="application/javascript">
-                function currentPageColumnHandle(td){
-                    return "666";
-                }
-            </script>
-            HTML;
-            $tools->append(new WebExportCsvTool(2, $func));
-        });
+     * $grid->tools(function ($tools) {
+     * $func = <<<HTML
+     * <script type="application/javascript">
+     * function currentPageColumnHandle(td){
+     * return "666";
+     * }
+     * </script>
+     * HTML;
+     * $tools->append(new WebExportCsvTool(2, $func));
+     * });
      */
     public function render()
     {
@@ -81,7 +81,7 @@ HTML;
             'click_id' => 'exportCurrentPage',
             'export_title' => '导出当前页',
         ];
-        if($this->export_type !== 1){
+        if ($this->export_type !== 1) {
             $data = [
                 'js_func' => $this->all_page_js_script . $this->js_script,
                 'click_id' => 'exportAllPage',

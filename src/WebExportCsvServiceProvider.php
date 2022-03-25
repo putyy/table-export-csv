@@ -12,8 +12,8 @@ class WebExportCsvServiceProvider extends ServiceProvider
      */
     public function boot(WebExportCsv $extension)
     {
-        if (! WebExportCsv::boot()) {
-            return ;
+        if (!WebExportCsv::boot()) {
+            return;
         }
 
         if ($views = $extension->views()) {
@@ -22,7 +22,7 @@ class WebExportCsvServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/laravel-admin-ext/table-export-csv')],
+                [$assets => public_path('vendor/putyy/table-export-csv')],
                 'table-export-csv'
             );
         }

@@ -5,4 +5,4 @@
     </a>
 </div>
 {!! $js_func !!}
-<script src="/vendor/laravel-admin-ext/table-export-csv/tableExportToCsv.js?vc=20220304"></script>
+<script src="/vendor/putyy/table-export-csv/tableExportToCsv.js"></script>

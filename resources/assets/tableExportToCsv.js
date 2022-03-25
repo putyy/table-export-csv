@@ -209,7 +209,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     /* e.g. {ids: [1, 2, 3]}*/
                     switch (arrayFormat) {
                         case 'indices':
-                           /* 结果: ids[0]=1&ids[1]=2&ids[2]=3 */
+                            /* 结果: ids[0]=1&ids[1]=2&ids[2]=3 */
                             for (let i = 0; i < value.length; i++) {
                                 _result.push(key + '[' + i + ']=' + value[i]);
                             }
