@@ -16,13 +16,17 @@ window.addEventListener('DOMContentLoaded', function () {
             if (!window.tableExportToCsv_isBind) {
                 window.tableExportToCsv_isBind = true;
                 $('#pjax-container').on('click', '#exportCurrentPage', function () {
-                    console.log('exportCurrentPage')
                     var tmp = [];
                     var data = [];
 
-                    if (exportApp.isDownLoadingCurrentPage || $(".grid-table tbody tr").length <= 1) {
+                    if (exportApp.isDownLoadingCurrentPage) {
                         return;
                     }
+
+                    if ($(".grid-table tbody .empty-grid") === 1) {
+                        return;
+                    }
+
                     exportApp.isDownLoadingCurrentPage = true;
                     data = currentPageTableHeader();
                     $(".grid-table tbody tr").each(function (index, item) {
@@ -47,9 +51,15 @@ window.addEventListener('DOMContentLoaded', function () {
                 });
 
                 $('#pjax-container').on('click', '#exportAllPage', function () {
-                    if (exportApp.isDownLoadingAllPage || $(".grid-table tbody tr").length <= 1) {
+
+                    if (exportApp.isDownLoadingAllPage) {
                         return;
                     }
+
+                    if ($(".grid-table tbody .empty-grid") === 1) {
+                        return;
+                    }
+
                     exportApp.isDownLoadingAllPage = true;
                     var tmp = [];
                     var data = allPageTableHeader();
